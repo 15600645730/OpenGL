@@ -56,7 +56,7 @@
 //
 //	glEnable(GL_DEPTH_TEST);
 //
-//	Shader cube("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LearnLight\\cube.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LearnLight\\cube.fs");
+//	Shader cube("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LearnLight\\cube1.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LearnLight\\cube1.fs");
 //	Shader light("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LearnLight\\light.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LearnLight\\light.fs");
 //
 //	float vertices[] = {
@@ -121,9 +121,9 @@
 //	unsigned int lightVAO;
 //	glGenVertexArrays(1, &lightVAO);
 //	glBindVertexArray(lightVAO);
-//	// åªéœ€è¦ç»‘å®šVBOä¸ç”¨å†æ¬¡è®¾ç½®VBOçš„æ•°æ®ï¼Œå› ä¸ºç®±å­çš„VBOæ•°æ®ä¸­å·²ç»åŒ…å«äº†æ­£ç¡®çš„ç«‹æ–¹ä½“é¡¶ç‚¹æ•°æ®
+//	// Ö»ĞèÒª°ó¶¨VBO²»ÓÃÔÙ´ÎÉèÖÃVBOµÄÊı¾İ£¬ÒòÎªÏä×ÓµÄVBOÊı¾İÖĞÒÑ¾­°üº¬ÁËÕıÈ·µÄÁ¢·½Ìå¶¥µãÊı¾İ
 //	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-//	// è®¾ç½®ç¯ç«‹æ–¹ä½“çš„é¡¶ç‚¹å±æ€§ï¼ˆå¯¹æˆ‘ä»¬çš„ç¯æ¥è¯´ä»…ä»…åªæœ‰ä½ç½®æ•°æ®ï¼‰
+//	// ÉèÖÃµÆÁ¢·½ÌåµÄ¶¥µãÊôĞÔ£¨¶ÔÎÒÃÇµÄµÆÀ´Ëµ½ö½öÖ»ÓĞÎ»ÖÃÊı¾İ£©
 //	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
 //	glEnableVertexAttribArray(0);
 //
@@ -145,7 +145,6 @@
 //		cube.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
 //		cube.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
 //		cube.setVec3("lightPos", lightPos);
-//		cube.setVec3("viewPos", camera.Position);
 //		
 //		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 //		glm::mat4 view = camera.GetViewMatrix();
@@ -153,7 +152,6 @@
 //		cube.setMat4("projection", projection);
 //		cube.setMat4("view", view);
 //		cube.setMat4("model", model);
-//        
 //
 //		glBindVertexArray(cubeVAO);
 //		glDrawArrays(GL_TRIANGLES, 0, 36);
@@ -211,7 +209,7 @@
 //	}
 //
 //	float xoffset = xpos - lastX;
-//	float yoffset = lastY - ypos;// æ³¨æ„è¿™é‡Œæ˜¯ç›¸åçš„ï¼Œå› ä¸ºyåæ ‡æ˜¯ä»åº•éƒ¨å¾€é¡¶éƒ¨ä¾æ¬¡å¢å¤§çš„
+//	float yoffset = lastY - ypos;// ×¢ÒâÕâÀïÊÇÏà·´µÄ£¬ÒòÎªy×ø±êÊÇ´Óµ×²¿Íù¶¥²¿ÒÀ´ÎÔö´óµÄ
 //	lastX = xpos;
 //	lastY = ypos;
 //
