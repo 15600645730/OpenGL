@@ -56,8 +56,8 @@ int main()
 
 	glEnable(GL_DEPTH_TEST);
 
-	Shader cube("F:\\opengl\\OpenGLProject\\Source\\\LearnLight\\cube.vs", "F:\\opengl\\OpenGLProject\\Source\\\LearnLight\\cube.fs");
-	Shader light("F:\\opengl\\OpenGLProject\\Source\\\LearnLight\\light.vs", "F:\\opengl\\OpenGLProject\\Source\\\LearnLight\\light.fs");
+	Shader cube("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LearnLight\\cube.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LearnLight\\cube.fs");
+	Shader light("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LearnLight\\light.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LearnLight\\light.fs");
 
 	float vertices[] = {
 	-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
@@ -115,7 +115,7 @@ int main()
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(6 * sizeof(float)));
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
 	glEnableVertexAttribArray(1);
 
 	unsigned int lightVAO;
@@ -124,7 +124,7 @@ int main()
 	// 只需要绑定VBO不用再次设置VBO的数据，因为箱子的VBO数据中已经包含了正确的立方体顶点数据
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	// 设置灯立方体的顶点属性（对我们的灯来说仅仅只有位置数据）
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 
 	while (!glfwWindowShouldClose(window))
@@ -141,14 +141,17 @@ int main()
 		cube.use();
 		cube.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
 		cube.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
-
+		cube.setVec3("lightPos", lightPos);
+		cube.setVec3("viewPos", camera.Position);
+		
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 		glm::mat4 view = camera.GetViewMatrix();
 		glm::mat4 model;
 		cube.setMat4("projection", projection);
 		cube.setMat4("view", view);
 		cube.setMat4("model", model);
- 
+        
+
 		glBindVertexArray(cubeVAO);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 

@@ -127,6 +127,10 @@ public:
 	{
 		glUniform3f(glGetUniformLocation(ID, name.c_str()), x, y, z);
 	}
+	void setVec3(const std::string& name, glm::vec3 vec) const
+	{
+		glUniform3f(glGetUniformLocation(ID, name.c_str()), vec.x, vec.y, vec.z);
+	}
 private:
 	// utility function for checking shader compilation/linking errors.
 	// ------------------------------------------------------------------------
