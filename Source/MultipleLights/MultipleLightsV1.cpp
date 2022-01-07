@@ -75,9 +75,58 @@
 //
 //	// build and compile our shader zprogram
 //	// ------------------------------------
-//	Shader cube("F:\\opengl\\OpenGLProject\\Source\\LightingMaps\\cube1.vs", "F:\\opengl\\OpenGLProject\\Source\\LightingMaps\\cube1.fs");
+//	Shader cube("F:\\opengl\\OpenGLProject\\Source\\\MultipleLights\\MultipleLights.vs", "F:\\opengl\\OpenGLProject\\Source\\\MultipleLights\\MultipleLights.fs");
 //	Shader light("F:\\opengl\\OpenGLProject\\Source\\LearnLight\\light.vs", "F:\\opengl\\OpenGLProject\\Source\\LearnLight\\light.fs");
 //
+//	glm::vec3 cubePositions[] =
+//	{
+//		glm::vec3(0.0f,  0.0f,  0.0f),
+//		glm::vec3(2.0f,  5.0f, -15.0f),
+//		glm::vec3(-1.5f, -2.2f, -2.5f),
+//		glm::vec3(-3.8f, -2.0f, -12.3f),
+//		glm::vec3(2.4f, -0.4f, -3.5f),
+//		glm::vec3(-1.7f,  3.0f, -7.5f),
+//		glm::vec3(1.3f, -2.0f, -2.5f),
+//		glm::vec3(1.5f,  2.0f, -2.5f),
+//		glm::vec3(1.5f,  0.2f, -1.5f),
+//		glm::vec3(-1.3f,  1.0f, -1.5f)
+//	};
+//
+//	glm::vec3 pointLightPositions[] =
+//	{
+//	 glm::vec3(0.7f,  0.2f,  2.0f),
+//	 glm::vec3(2.3f, -3.3f, -4.0f),
+//	 glm::vec3(-4.0f,  2.0f, -12.0f),
+//	 glm::vec3(0.0f,  0.0f, -3.0f)
+//	};
+//	// DESERT
+//	//glm::vec3 pointLightColors[] = {
+//	//glm::vec3(1.0f, 0.6f, 0.0f),
+//	//glm::vec3(1.0f, 0.0f, 0.0f),
+//	//glm::vec3(1.0f, 1.0, 0.0),
+//	//glm::vec3(0.2f, 0.2f, 1.0f)
+//	//};
+//	// FACTORY
+//	//glm::vec3 pointLightColors[] = {
+//	//glm::vec3(0.2f, 0.2f, 0.6f),
+//	//glm::vec3(0.3f, 0.3f, 0.7f),
+//	//glm::vec3(0.0f, 0.0f, 0.3f),
+//	//glm::vec3(0.4f, 0.4f, 0.4f)
+//	//};
+//	// HORROR
+//	/*glm::vec3 pointLightColors[] = {
+//		glm::vec3(0.1f, 0.1f, 0.1f),
+//		glm::vec3(0.1f, 0.1f, 0.1f),
+//		glm::vec3(0.1f, 0.1f, 0.1f),
+//		glm::vec3(0.3f, 0.1f, 0.1f)
+//	};*/
+//	// BIOCHEMICAL LAB
+//	glm::vec3 pointLightColors[] = {
+//	glm::vec3(0.4f, 0.7f, 0.1f),
+//	glm::vec3(0.4f, 0.7f, 0.1f),
+//	glm::vec3(0.4f, 0.7f, 0.1f),
+//	glm::vec3(0.4f, 0.7f, 0.1f)
+//	};
 //	// set up vertex data (and buffer(s)) and configure vertex attributes
 //	// ------------------------------------------------------------------
 //	float vertices[] = {
@@ -154,13 +203,13 @@
 //	// -----------------------------------------------------------------------------
 //	unsigned int diffuseMap = loadTexture("F:\\opengl\\OpenGLProject\\Source\\LightingMaps\\container2.png");
 //	unsigned int specularMap = loadTexture("F:\\opengl\\OpenGLProject\\Source\\LightingMaps\\container2_specular.png");
-//	unsigned int emissionMap = loadTexture("F:\\opengl\\OpenGLProject\\Source\\LightingMaps\\matrix.jpg");
+//
 //	// shader configuration
 //	// --------------------
 //	cube.use();
 //	cube.setInt("material.diffuse", 0);
 //	cube.setInt("material.specular", 1);
-//	cube.setInt("material.emission", 2);
+//
 //	// render loop
 //	// -----------
 //	while (!glfwWindowShouldClose(window))
@@ -177,21 +226,117 @@
 //
 //		// render
 //		// ------
-//		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+//		// DESERT
+//		//glClearColor(0.75f, 0.52f, 0.3f, 1.0f);
+//		// FACTORY
+//		//glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+//		// HORROR
+//		//glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+//		// BIOCHEMICAL LAB
+//		glClearColor(0.9f, 0.9f, 0.9f, 1.0f);
 //		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 //
 //		// be sure to activate shader when setting uniforms/drawing objects
 //		cube.use();
-//		cube.setVec3("light.position", lightPos);
 //		cube.setVec3("viewPos", camera.Position);
+//		cube.setFloat("material.shininess", 32.0f);
 //
-//		// light properties
-//		cube.setVec3("light.ambient", 0.2f, 0.2f, 0.2f);
-//		cube.setVec3("light.diffuse", 0.5f, 0.5f, 0.5f);
-//		cube.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
-//
-//		// material properties
-//		cube.setFloat("material.shininess", 64.0f);
+//		// DESERT directional light
+//		//cube.setVec3("dirLight.direction", -0.2f, -1.0f, -0.3f);
+//		//cube.setVec3("dirLight.ambient", 0.3f, 0.24f, 0.14f);
+//		//cube.setVec3("dirLight.diffuse", 0.7f, 0.42f, 0.26f);
+//		//cube.setVec3("dirLight.specular", 0.5f, 0.5f, 0.5f);
+//	    // FACTORY directional light
+//		//cube.setVec3("dirLight.direction", -0.2f, -1.0f, -0.3f);
+//		//cube.setVec3("dirLight.ambient", 0.05f, 0.05f, 0.1f);
+//		//cube.setVec3("dirLight.diffuse", 0.2f, 0.2f, 0.7f);
+//		//cube.setVec3("dirLight.specular", 0.7f, 0.7f, 0.7f);
+//		// HORROR directional light
+//		/*cube.setVec3("dirLight.direction", -0.2f, -1.0f, -0.3f);
+//		cube.setVec3("dirLight.ambient", 0.0f, 0.0f, 0.0f);
+//		cube.setVec3("dirLight.diffuse", 0.05f, 0.05f, 0.05f);
+//		cube.setVec3("dirLight.specular", 0.2f, 0.2f, 0.2f);*/
+//		// BIOCHEMICAL LAB directional light
+//		cube.setVec3("dirLight.direction", -0.2f, -1.0f, -0.3f);
+//		cube.setVec3("dirLight.ambient", 0.5f, 0.5f, 0.5f);
+//		cube.setVec3("dirLight.diffuse", 1.0f, 1.0f, 1.0f);
+//		cube.setVec3("dirLight.specular", 1.0f, 1.0f, 1.0f);
+//		// point light 1
+//		cube.setVec3("pointLights[0].position", pointLightPositions[0]);
+//		cube.setVec3("pointLights[0].ambient", pointLightColors[0] * 0.1f);
+//		cube.setVec3("pointLights[0].diffuse", pointLightColors[0]);
+//		cube.setVec3("pointLights[0].specular", pointLightColors[0]);
+//		cube.setFloat("pointLights[0].constant", 1.0f);
+//		cube.setFloat("pointLights[0].linear", 0.09);
+//		cube.setFloat("pointLights[0].quadratic", 0.032);
+//		// point light 2
+//		cube.setVec3("pointLights[1].position", pointLightPositions[1]);
+//		cube.setVec3("pointLights[1].ambient", pointLightColors[1] * 0.1f);
+//		cube.setVec3("pointLights[1].diffuse", pointLightColors[1]);
+//		cube.setVec3("pointLights[1].specular", pointLightColors[1]);
+//		cube.setFloat("pointLights[1].constant", 1.0f);
+//		cube.setFloat("pointLights[1].linear", 0.09);
+//		cube.setFloat("pointLights[1].quadratic", 0.032);
+//		// point light 3
+//		cube.setVec3("pointLights[2].position", pointLightPositions[2]);
+//		cube.setVec3("pointLights[2].ambient", pointLightColors[2] * 0.1f);
+//		cube.setVec3("pointLights[2].diffuse", pointLightColors[2]);
+//		cube.setVec3("pointLights[2].specular", pointLightColors[2]);
+//		cube.setFloat("pointLights[2].constant", 1.0f);
+//		cube.setFloat("pointLights[2].linear", 0.09);
+//		cube.setFloat("pointLights[2].quadratic", 0.032);
+//		// point light 4
+//		cube.setVec3("pointLights[3].position", pointLightPositions[3]);
+//		cube.setVec3("pointLights[3].ambient", pointLightColors[3] * 0.1f);
+//		cube.setVec3("pointLights[3].diffuse", pointLightColors[3]);
+//		cube.setVec3("pointLights[3].specular", pointLightColors[3]);
+//		cube.setFloat("pointLights[3].constant", 1.0f);
+//		cube.setFloat("pointLights[3].linear", 0.09);
+//		cube.setFloat("pointLights[3].quadratic", 0.032);
+//		// DESERT spotLight
+//		/*cube.setVec3("spotLight.position", camera.Position);
+//		cube.setVec3("spotLight.direction", camera.Front);
+//		cube.setVec3("spotLight.ambient", 0.0f, 0.0f, 0.0f);
+//		cube.setVec3("spotLight.diffuse", 0.8f, 0.8f, 0.0f);
+//		cube.setVec3("spotLight.specular", 0.8f, 0.8f, 0.0f);
+//		cube.setFloat("spotLight.constant", 1.0f);
+//		cube.setFloat("spotLight.linear", 0.09);
+//		cube.setFloat("spotLight.quadratic", 0.032);
+//		cube.setFloat("spotLight.cutOff", glm::cos(glm::radians(12.5f)));
+//		cube.setFloat("spotLight.outerCutOff", glm::cos(glm::radians(15.0f)));*/
+//		// FACTORY spotLight
+//		/*cube.setVec3("spotLight.position", camera.Position);
+//		cube.setVec3("spotLight.direction", camera.Front);
+//		cube.setVec3("spotLight.ambient", 0.0f, 0.0f, 0.0f);
+//		cube.setVec3("spotLight.diffuse", 1.0f, 1.0f, 1.0f);
+//		cube.setVec3("spotLight.specular", 1.0f, 1.0f, 1.0f);
+//		cube.setFloat("spotLight.constant", 1.0f);
+//		cube.setFloat("spotLight.linear", 0.09);
+//		cube.setFloat("spotLight.quadratic", 0.032);
+//		cube.setFloat("spotLight.cutOff", glm::cos(glm::radians(10.0f)));
+//		cube.setFloat("spotLight.outerCutOff", glm::cos(glm::radians(12.5f)));*/
+//		// HORROR directional light
+//		/*cube.setVec3("spotLight.position", camera.Position);
+//		cube.setVec3("spotLight.direction", camera.Front);
+//		cube.setVec3("spotLight.ambient", 0.0f, 0.0f, 0.0f);
+//		cube.setVec3("spotLight.diffuse", 1.0f, 1.0f, 1.0f);
+//		cube.setVec3("spotLight.specular", 1.0f, 1.0f, 1.0f);
+//		cube.setFloat("spotLight.constant", 1.0f);
+//		cube.setFloat("spotLight.linear", 0.09);
+//		cube.setFloat("spotLight.quadratic", 0.032);
+//		cube.setFloat("spotLight.cutOff", glm::cos(glm::radians(10.0f)));
+//		cube.setFloat("spotLight.outerCutOff", glm::cos(glm::radians(15.0f)));*/
+//		//  BIOCHEMICAL LAB directional light
+//		cube.setVec3("spotLight.position", camera.Position);
+//		cube.setVec3("spotLight.direction", camera.Front);
+//		cube.setVec3("spotLight.ambient", 0.0f, 0.0f, 0.0f);
+//		cube.setVec3("spotLight.diffuse", 0.0f, 1.0f, 0.0f);
+//		cube.setVec3("spotLight.specular", 0.0f, 1.0f, 0.0f);
+//		cube.setFloat("spotLight.constant", 1.0f);
+//		cube.setFloat("spotLight.linear", 0.07);
+//		cube.setFloat("spotLight.quadratic", 0.017);
+//		cube.setFloat("spotLight.cutOff", glm::cos(glm::radians(7.0f)));
+//		cube.setFloat("spotLight.outerCutOff", glm::cos(glm::radians(10.0f)));
 //
 //		// view/projection transformations
 //		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
@@ -199,38 +344,40 @@
 //		cube.setMat4("projection", projection);
 //		cube.setMat4("view", view);
 //
-//		// world transformation
-//		glm::mat4 model = glm::mat4(1.0f);
-//		cube.setMat4("model", model);
-//
 //		// bind diffuse map
 //		glActiveTexture(GL_TEXTURE0);
 //		glBindTexture(GL_TEXTURE_2D, diffuseMap);
-//		
+//
 //		// bind specular map
 //		glActiveTexture(GL_TEXTURE1);
 //		glBindTexture(GL_TEXTURE_2D, specularMap);
 //
-//		// bind emission map
-//		glActiveTexture(GL_TEXTURE2);
-//		glBindTexture(GL_TEXTURE_2D, emissionMap);
-//
 //		// render the cube
 //		glBindVertexArray(cubeVAO);
-//		glDrawArrays(GL_TRIANGLES, 0, 36);
-//
+//		for (unsigned int i = 0; i < 10; i++)
+//		{
+//			glm::mat4 model;
+//			model = glm::translate(model, cubePositions[i]);
+//			float angle = 20.0f * i;
+//			model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
+//			cube.setMat4("model", model);
+//			glDrawArrays(GL_TRIANGLES, 0, 36);
+//		}
 //
 //		// also draw the lamp object
 //		light.use();
 //		light.setMat4("projection", projection);
 //		light.setMat4("view", view);
-//		model = glm::mat4(1.0f);
-//		model = glm::translate(model, lightPos);
-//		model = glm::scale(model, glm::vec3(0.2f)); // a smaller cube
-//		light.setMat4("model", model);
 //
 //		glBindVertexArray(lightCubeVAO);
-//		glDrawArrays(GL_TRIANGLES, 0, 36);
+//		for (unsigned int i = 0; i < 4; i++)
+//		{
+//			glm::mat4 model;
+//			model = glm::translate(model, pointLightPositions[i]);
+//			model = glm::scale(model, glm::vec3(0.2f));
+//			light.setMat4("model", model);
+//			glDrawArrays(GL_TRIANGLES, 0, 36);
+//		}
 //
 //
 //		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)

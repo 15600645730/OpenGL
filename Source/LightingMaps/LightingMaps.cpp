@@ -75,8 +75,8 @@
 //
 //	// build and compile our shader zprogram
 //	// ------------------------------------
-//	Shader cube("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LightingMaps\\cube.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LightingMaps\\cube.fs");
-//	Shader light("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LearnLight\\light.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LearnLight\\light.fs");
+//	Shader cube("F:\\opengl\\OpenGLProject\\Source\\LightingMaps\\cube.vs", "F:\\opengl\\OpenGLProject\\Source\\LightingMaps\\cube.fs");
+//	Shader light("F:\\opengl\\OpenGLProject\\Source\\LearnLight\\light.vs", "F:\\opengl\\OpenGLProject\\Source\\LearnLight\\light.fs");
 //
 //	// set up vertex data (and buffer(s)) and configure vertex attributes
 //	// ------------------------------------------------------------------
@@ -152,8 +152,8 @@
 //
 //	// load textures (we now use a utility function to keep the code more organized)
 //	// -----------------------------------------------------------------------------
-//	unsigned int diffuseMap = loadTexture("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LightingMaps\\container2.png");
-//	unsigned int specularMap = loadTexture("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LightingMaps\\container2_specular.png");
+//	unsigned int diffuseMap = loadTexture("F:\\opengl\\OpenGLProject\\Source\\LightingMaps\\container2.png");
+//	unsigned int specularMap = loadTexture("F:\\opengl\\OpenGLProject\\Source\\LightingMaps\\container2_specular.png");
 //
 //	// shader configuration
 //	// --------------------
@@ -191,7 +191,6 @@
 //		cube.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
 //
 //		// material properties
-//		cube.setVec3("material.specular", 0.5f, 0.5f, 0.5f);
 //		cube.setFloat("material.shininess", 64.0f);
 //
 //		// view/projection transformations
