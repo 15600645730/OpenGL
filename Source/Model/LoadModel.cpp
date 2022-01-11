@@ -130,7 +130,7 @@
 //
 //	// load models
 //    // -----------
-//	Model ourModel("F:\\opengl\\OpenGLProject\\resources\\objects\\nanosuit\\nanosuit.obj");
+//	Model ourModel("F:\\opengl\\OpenGLProject\\resources\\nanosuit\\nanosuit.obj");
 //
 //
 //	unsigned int VBO,lightVAO;

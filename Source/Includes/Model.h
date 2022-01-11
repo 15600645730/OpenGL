@@ -117,6 +117,9 @@ private:
 			vector<Texture> specularMaps = loadMaterialTextures(material,
 				aiTextureType_SPECULAR, "texture_specular");
 			textures.insert(textures.end(), specularMaps.begin(), specularMaps.end());
+			vector<Texture> reflectionMaps = loadMaterialTextures(material,
+				aiTextureType_AMBIENT, "texture_reflection");
+			textures.insert(textures.end(), reflectionMaps.begin(), reflectionMaps.end());
 		}
 
 		return Mesh(vertices, indices, textures);

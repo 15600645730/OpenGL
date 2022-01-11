@@ -58,10 +58,10 @@
 //
 //	glEnable(GL_DEPTH_TEST);
 //
-//	Shader shader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\CubeMaps\\CubeMaps.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\CubeMaps\\CubeMaps.fs");
-//	Shader skyboxShader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\CubeMaps\\skybox.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\CubeMaps\\skybox.fs");
-//	//Shader shader("F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\CubeMaps.vs", "F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\CubeMaps.fs");
-//	//Shader skyBoxShader("F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\skybox.vs", "F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\skybox.fs");
+//	/*Shader shader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\CubeMaps\\CubeMaps.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\CubeMaps\\CubeMaps.fs");
+//	Shader skyboxShader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\CubeMaps\\skybox.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\CubeMaps\\skybox.fs");*/
+//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\CubeMaps.vs", "F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\CubeMaps.fs");
+//	Shader skyboxShader("F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\skybox.vs", "F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\skybox.fs");
 //	
 //
 //	float cubeVertices[] = {
@@ -177,29 +177,29 @@
 //	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 //
 //
-//	unsigned int cubeTexture = loadTexture("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\Blending\\container.jpg");
-//	//unsigned int cubeTexture = loadTexture("F:\\opengl\\OpenGLProject\\Source\\Blending\\container.jpg");
+//	//unsigned int cubeTexture = loadTexture("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\Blending\\container.jpg");
+//	unsigned int cubeTexture = loadTexture("F:\\opengl\\OpenGLProject\\Source\\Blending\\container.jpg");
 //
-//
-//	//vector<std::string> faces
-//	//{
-//	//	"F:\\opengl\\OpenGLProject\\resources\\skybox\\right.jpg",
-//	//	"F:\\opengl\\OpenGLProject\\resources\\skybox\\left.jpg",
-//	//	"F:\\opengl\\OpenGLProject\\resources\\skybox\\top.jpg",
-//	//	"F:\\opengl\\OpenGLProject\\resources\\skybox\\bottom.jpg",
-//	//	"F:\\opengl\\OpenGLProject\\resources\\skybox\\front.jpg",
-//	//	"F:\\opengl\\OpenGLProject\\resources\\skybox\\back.jpg"
-//	//};
 //
 //	vector<std::string> faces
 //	{
-//		"D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\skybox\\right.jpg",
-//		"D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\skybox\\left.jpg",
-//		"D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\skybox\\top.jpg",
-//		"D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\skybox\\bottom.jpg",
-//		"D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\skybox\\front.jpg",
-//		"D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\skybox\\back.jpg"
+//		"F:\\opengl\\OpenGLProject\\resources\\skybox\\right.jpg",
+//		"F:\\opengl\\OpenGLProject\\resources\\skybox\\left.jpg",
+//		"F:\\opengl\\OpenGLProject\\resources\\skybox\\top.jpg",
+//		"F:\\opengl\\OpenGLProject\\resources\\skybox\\bottom.jpg",
+//		"F:\\opengl\\OpenGLProject\\resources\\skybox\\front.jpg",
+//		"F:\\opengl\\OpenGLProject\\resources\\skybox\\back.jpg"
 //	};
+//
+//	//vector<std::string> faces
+//	//{
+//	//	"D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\skybox\\right.jpg",
+//	//	"D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\skybox\\left.jpg",
+//	//	"D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\skybox\\top.jpg",
+//	//	"D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\skybox\\bottom.jpg",
+//	//	"D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\skybox\\front.jpg",
+//	//	"D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\skybox\\back.jpg"
+//	//};
 //
 //	unsigned int cubemapTexture = loadCubemap(faces);
 //
