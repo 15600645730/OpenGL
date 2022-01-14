@@ -39,6 +39,8 @@ public:
 	vector<Vertex> vertices;
 	vector<unsigned int> indices;
 	vector<Texture> textures;
+	/*  渲染数据  */
+	unsigned int VAO, VBO, EBO;
 	/*  函数  */
 	Mesh(vector<Vertex> vertices, vector<unsigned int> indices, vector<Texture> textures)
 	{
@@ -77,8 +79,7 @@ public:
 		glActiveTexture(GL_TEXTURE0);
 	}
 private:
-	/*  渲染数据  */
-	unsigned int VAO, VBO, EBO;
+
 	/*  函数  */
 	void setupMesh()
 	{

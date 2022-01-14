@@ -25,6 +25,7 @@ class Model
 {
 public:
 	vector<Texture> textures_loaded;
+	vector<Mesh> meshes;
 	/*函数 */
 	Model(const char* path)
 	{
@@ -37,7 +38,6 @@ public:
 	}
 private:
 	/*模型数据*/
-	vector<Mesh> meshes;
 	string directory;
 	/*函数*/
 	void loadModel(string path)
