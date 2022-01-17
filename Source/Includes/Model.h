@@ -9,9 +9,9 @@
 #include <assimp/scene.h>
 #include <assimp/postprocess.h>
 
-#include "../Includes/stb_image.h"
-#include "../Includes/mesh.h"
-#include "../LearnShader/Shader.h"
+#include "stb_image.h"
+#include "mesh.h"
+#include "Shader.h"
 
 #include <string>
 #include <fstream>

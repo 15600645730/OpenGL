@@ -6,7 +6,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-#include "../LearnShader/Shader.h"
+#include "Shader.h"
 
 #include <string>
 #include <vector>
