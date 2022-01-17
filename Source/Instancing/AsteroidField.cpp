@@ -1,12 +1,18 @@
 //#include <glad/glad.h>
 //#include <GLFW/glfw3.h>
 //#include <iostream>
+//#include "../LearnShader/Shader.h"
+//#include "../Includes/stb_image.h"
 //#include <glm/glm.hpp>
 //#include <glm/gtc/matrix_transform.hpp>
 //#include <glm/gtc/type_ptr.hpp>
 //#include "../LearnCamera/Camera.h"
-//#include "../LearnShader/Shader.h"
-//#include "../Includes/stb_image.h"
+//#include <map>
+//#include <vector>
+//#include <string>
+//#include <iosfwd>
+//
+//using namespace::std;
 //
 //void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 //void processInput(GLFWwindow* window);
@@ -20,8 +26,8 @@
 //float lastX = SCR_WIDTH / 2.0f;
 //float lastY = SCR_HEIGHT / 2.0f;
 //
-//float deltaTime = 0.0f; 
-//float lastFrame = 0.0f; 
+//float deltaTime = 0.0f;
+//float lastFrame = 0.0f;
 //
 //bool firstMouse = true;
 //
@@ -31,7 +37,7 @@
 //	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 //	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 //	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-//	glfwWindowHint(GLFW_SAMPLES, 4);
+//
 //
 //	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
 //	if (window == NULL)
@@ -52,66 +58,57 @@
 //		return -1;
 //	}
 //
-//	glEnable(GL_MULTISAMPLE);
 //	glEnable(GL_DEPTH_TEST);
 //
-//	//Shader shader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\AntiAliasing\\MSAA.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\AntiAliasing\\MSAA.fs");
-//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\AntiAliasing\\MSAA.vs", "F:\\opengl\\OpenGLProject\\Source\\AntiAliasing\\MSAA.fs");
-//	
-//	GLfloat cubeVertices[] = {
-//		// Positions       
-//		-0.5f, -0.5f, -0.5f,
-//		 0.5f, -0.5f, -0.5f,
-//		 0.5f,  0.5f, -0.5f,
-//		 0.5f,  0.5f, -0.5f,
-//		-0.5f,  0.5f, -0.5f,
-//		-0.5f, -0.5f, -0.5f,
+//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\Instancing\\AsteroidField.vs", "F:\\opengl\\OpenGLProject\\Source\\Instancing\\AsteroidField.fs");
 //
-//		-0.5f, -0.5f,  0.5f,
-//		 0.5f, -0.5f,  0.5f,
-//		 0.5f,  0.5f,  0.5f,
-//		 0.5f,  0.5f,  0.5f,
-//		-0.5f,  0.5f,  0.5f,
-//		-0.5f, -0.5f,  0.5f,
+//	float quadVertices[] = {
+//		// 位置          // 颜色
+//		-0.05f,  0.05f,  1.0f, 0.0f, 0.0f,
+//		 0.05f, -0.05f,  0.0f, 1.0f, 0.0f,
+//		-0.05f, -0.05f,  0.0f, 0.0f, 1.0f,
 //
-//		-0.5f,  0.5f,  0.5f,
-//		-0.5f,  0.5f, -0.5f,
-//		-0.5f, -0.5f, -0.5f,
-//		-0.5f, -0.5f, -0.5f,
-//		-0.5f, -0.5f,  0.5f,
-//		-0.5f,  0.5f,  0.5f,
-//
-//		 0.5f,  0.5f,  0.5f,
-//		 0.5f,  0.5f, -0.5f,
-//		 0.5f, -0.5f, -0.5f,
-//		 0.5f, -0.5f, -0.5f,
-//		 0.5f, -0.5f,  0.5f,
-//		 0.5f,  0.5f,  0.5f,
-//
-//		-0.5f, -0.5f, -0.5f,
-//		 0.5f, -0.5f, -0.5f,
-//		 0.5f, -0.5f,  0.5f,
-//		 0.5f, -0.5f,  0.5f,
-//		-0.5f, -0.5f,  0.5f,
-//		-0.5f, -0.5f, -0.5f,
-//
-//		-0.5f,  0.5f, -0.5f,
-//		 0.5f,  0.5f, -0.5f,
-//		 0.5f,  0.5f,  0.5f,
-//		 0.5f,  0.5f,  0.5f,
-//		-0.5f,  0.5f,  0.5f,
-//		-0.5f,  0.5f, -0.5f
+//		-0.05f,  0.05f,  1.0f, 0.0f, 0.0f,
+//		 0.05f, -0.05f,  0.0f, 1.0f, 0.0f,
+//		 0.05f,  0.05f,  0.0f, 1.0f, 1.0f
 //	};
 //
-//	unsigned int cubeVBO, cubeVAO;
-//	glGenVertexArrays(1, &cubeVAO);
-//	glGenBuffers(1, &cubeVBO);
-//    glBindVertexArray(cubeVAO);
-//    glBindBuffer(GL_ARRAY_BUFFER, cubeVBO);
-//	glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), cubeVertices, GL_STATIC_DRAW);
+//	unsigned int VAO, VBO;
+//	glGenVertexArrays(1, &VAO);
+//	glGenBuffers(1, &VBO);
+//	glBindVertexArray(VAO);
+//	glBindBuffer(GL_ARRAY_BUFFER, VBO);
+//	glBufferData(GL_ARRAY_BUFFER, sizeof(quadVertices), &quadVertices, GL_STATIC_DRAW);
 //	glEnableVertexAttribArray(0);
-//    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-//	glBindVertexArray(0);
+//	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
+//	glEnableVertexAttribArray(1);
+//	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(2 * sizeof(float)));
+//
+//	glm::vec2 translations[100];
+//	int index = 0;
+//	float offset = 0.1f;
+//	for (int y = -10; y < 10; y += 2)
+//	{
+//		for (int x = -10; x < 10; x += 2)
+//		{
+//			glm::vec2 translation;
+//			translation.x = (float)x / 10.0f + offset;
+//			translation.y = (float)y / 10.0f + offset;
+//			translations[index++] = translation;
+//		}
+//	}
+//
+//	unsigned int instanceVBO;
+//	glGenBuffers(1, &instanceVBO);
+//	glBindBuffer(GL_ARRAY_BUFFER, instanceVBO);
+//	glBufferData(GL_ARRAY_BUFFER, sizeof(glm::vec2) * 100, &translations[0], GL_STATIC_DRAW);
+//	glBindBuffer(GL_ARRAY_BUFFER, 0);
+//
+//	glEnableVertexAttribArray(2);
+//	glBindBuffer(GL_ARRAY_BUFFER, instanceVBO);
+//	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
+//	glBindBuffer(GL_ARRAY_BUFFER, 0);
+//	glVertexAttribDivisor(2, 1);
 //
 //	while (!glfwWindowShouldClose(window))
 //	{
@@ -124,24 +121,25 @@
 //		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 //		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 //
-//
 //		shader.use();
-//		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-//		glm::mat4 view = camera.GetViewMatrix();
-//		glm::mat4 model;
-//		shader.setMat4("projection", projection);
-//		shader.setMat4("view", view);
-//		shader.setMat4("model", model);
-//        glBindVertexArray(cubeVAO);
-//		glDrawArrays(GL_TRIANGLES, 0, 36);
-//		glBindVertexArray(0);
+//		for (unsigned int i = 0; i < 100; i++)
+//		{
+//			stringstream ss;
+//			string index;
+//			ss << i;
+//			index = ss.str();
+//			shader.setVec2(("offsets[" + index + "]").c_str(), translations[i]);
+//		}
+//		glBindVertexArray(VAO);
+//		glDrawArraysInstanced(GL_TRIANGLES, 0, 6, 100);
 //
-//     	glfwSwapBuffers(window);
+//		glfwSwapBuffers(window);
 //		glfwPollEvents();
 //	}
 //
-//    glDeleteVertexArrays(1, &cubeVAO);
-//	glDeleteBuffers(1, &cubeVBO);
+//	glDeleteVertexArrays(1, &VAO);
+//	glDeleteBuffers(1, &VBO);
+//
 //
 //	glfwTerminate();
 //	return 0;

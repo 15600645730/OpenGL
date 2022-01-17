@@ -8,10 +8,11 @@
 //#include "../LearnShader/Shader.h"
 //#include "../Includes/stb_image.h"
 //
+//using namespace::std;
+//
 //void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 //void processInput(GLFWwindow* window);
 //void mouse_callback(GLFWwindow* window, double xpos, double ypos);
-//void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 //
 //const unsigned int SCR_WIDTH = 800;
 //const unsigned int SCR_HEIGHT = 600;
@@ -31,7 +32,7 @@
 //	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 //	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 //	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-//	glfwWindowHint(GLFW_SAMPLES, 4);
+//
 //
 //	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
 //	if (window == NULL)
@@ -44,7 +45,6 @@
 //	glfwMakeContextCurrent(window);
 //	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 //	glfwSetCursorPosCallback(window, mouse_callback);
-//	glfwSetScrollCallback(window, scroll_callback);
 //
 //	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 //	{
@@ -52,14 +52,15 @@
 //		return -1;
 //	}
 //
-//	glEnable(GL_MULTISAMPLE);
 //	glEnable(GL_DEPTH_TEST);
 //
-//	//Shader shader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\AntiAliasing\\MSAA.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\AntiAliasing\\MSAA.fs");
-//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\AntiAliasing\\MSAA.vs", "F:\\opengl\\OpenGLProject\\Source\\AntiAliasing\\MSAA.fs");
-//	
-//	GLfloat cubeVertices[] = {
-//		// Positions       
+//	Shader red("F:\\opengl\\OpenGLProject\\Source\\AdvancedGLSL\\Ubo.vs", "F:\\opengl\\OpenGLProject\\Source\\AdvancedGLSL\\Red.fs");
+//	Shader green("F:\\opengl\\OpenGLProject\\Source\\AdvancedGLSL\\Ubo.vs", "F:\\opengl\\OpenGLProject\\Source\\AdvancedGLSL\\Green.fs");
+//	Shader blue("F:\\opengl\\OpenGLProject\\Source\\AdvancedGLSL\\Ubo.vs", "F:\\opengl\\OpenGLProject\\Source\\AdvancedGLSL\\Blue.fs");
+//	Shader yellow("F:\\opengl\\OpenGLProject\\Source\\AdvancedGLSL\\Ubo.vs", "F:\\opengl\\OpenGLProject\\Source\\AdvancedGLSL\\Yellow.fs");
+//
+//	float cubeVertices[] = {
+//		// positions         
 //		-0.5f, -0.5f, -0.5f,
 //		 0.5f, -0.5f, -0.5f,
 //		 0.5f,  0.5f, -0.5f,
@@ -100,18 +101,41 @@
 //		 0.5f,  0.5f,  0.5f,
 //		 0.5f,  0.5f,  0.5f,
 //		-0.5f,  0.5f,  0.5f,
-//		-0.5f,  0.5f, -0.5f
+//		-0.5f,  0.5f, -0.5f,
 //	};
 //
-//	unsigned int cubeVBO, cubeVAO;
+//	// cube VAO
+//	unsigned int cubeVAO, cubeVBO;
 //	glGenVertexArrays(1, &cubeVAO);
 //	glGenBuffers(1, &cubeVBO);
-//    glBindVertexArray(cubeVAO);
-//    glBindBuffer(GL_ARRAY_BUFFER, cubeVBO);
-//	glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), cubeVertices, GL_STATIC_DRAW);
+//	glBindVertexArray(cubeVAO);
+//	glBindBuffer(GL_ARRAY_BUFFER, cubeVBO);
+//	glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), &cubeVertices, GL_STATIC_DRAW);
 //	glEnableVertexAttribArray(0);
-//    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-//	glBindVertexArray(0);
+//	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+//
+//	//UBO
+//	unsigned int uniformBlockIndexRed = glGetUniformBlockIndex(red.ID, "Matrices");
+//	unsigned int uniformBlockIndexGreen = glGetUniformBlockIndex(green.ID, "Matrices");
+//	unsigned int uniformBlockIndexBlue = glGetUniformBlockIndex(blue.ID, "Matrices");
+//	unsigned int uniformBlockIndexYellow = glGetUniformBlockIndex(yellow.ID, "Matrices");
+//
+//	glUniformBlockBinding(red.ID, uniformBlockIndexRed, 0);
+//	glUniformBlockBinding(green.ID, uniformBlockIndexGreen, 0);
+//	glUniformBlockBinding(blue.ID, uniformBlockIndexBlue, 0);
+//	glUniformBlockBinding(yellow.ID, uniformBlockIndexYellow, 0);
+//
+//	unsigned int uboMatices;
+//	glGenBuffers(1, &uboMatices);
+//    glBindBuffer(GL_UNIFORM_BUFFER, uboMatices);
+//	glBufferData(GL_UNIFORM_BUFFER, 2 * sizeof(glm::mat4), NULL, GL_STATIC_DRAW);
+//	glBindBuffer(GL_UNIFORM_BUFFER, 0);
+//    glBindBufferRange(GL_UNIFORM_BUFFER, 0, uboMatices, 0, 2 * sizeof(glm::mat4));
+//
+//	glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+//	glBindBuffer(GL_UNIFORM_BUFFER, uboMatices);
+//	glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::mat4), glm::value_ptr(projection));
+//	glBindBuffer(GL_UNIFORM_BUFFER, 0);
 //
 //	while (!glfwWindowShouldClose(window))
 //	{
@@ -124,23 +148,54 @@
 //		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 //		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 //
-//
-//		shader.use();
-//		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 //		glm::mat4 view = camera.GetViewMatrix();
-//		glm::mat4 model;
-//		shader.setMat4("projection", projection);
-//		shader.setMat4("view", view);
-//		shader.setMat4("model", model);
-//        glBindVertexArray(cubeVAO);
+//		glBindBuffer(GL_UNIFORM_BUFFER, uboMatices);
+//		glBufferSubData(GL_UNIFORM_BUFFER, sizeof(glm::mat4), sizeof(glm::mat4), glm::value_ptr(view));
+//		glBindBuffer(GL_UNIFORM_BUFFER, 0);
+//
+//		//  RED
+//		red.use();
+//		glm::mat4 model = glm::mat4(1.0f);
+//		model = glm::translate(model, glm::vec3(-0.75f, 0.75f, 0.0f));
+//		red.setMat4("model", model);
+//		glBindVertexArray(cubeVAO);
 //		glDrawArrays(GL_TRIANGLES, 0, 36);
 //		glBindVertexArray(0);
 //
-//     	glfwSwapBuffers(window);
+//		//  Green
+//		green.use();
+//		model = glm::mat4(1.0f);
+//		model = glm::translate(model, glm::vec3(0.75f, 0.75f, 0.0f));
+//		green.setMat4("model", model);
+//		glBindVertexArray(cubeVAO);
+//		glDrawArrays(GL_TRIANGLES, 0, 36);
+//		glBindVertexArray(0);
+//
+//
+//		//  Blue
+//		blue.use();
+//		model = glm::mat4(1.0f);
+//		model = glm::translate(model, glm::vec3(-0.75f, -0.75f, 0.0f));
+//		blue.setMat4("model", model);
+//		glBindVertexArray(cubeVAO);
+//		glDrawArrays(GL_TRIANGLES, 0, 36);
+//		glBindVertexArray(0);
+//
+//
+//		//  Yellow
+//		yellow.use();
+//		model = glm::mat4(1.0f);
+//		model = glm::translate(model, glm::vec3(0.75f, -0.75f, 0.0f));
+//		yellow.setMat4("model", model);
+//		glBindVertexArray(cubeVAO);
+//		glDrawArrays(GL_TRIANGLES, 0, 36);
+//		glBindVertexArray(0);
+//
+//		glfwSwapBuffers(window);
 //		glfwPollEvents();
 //	}
 //
-//    glDeleteVertexArrays(1, &cubeVAO);
+//	glDeleteVertexArrays(1, &cubeVAO);
 //	glDeleteBuffers(1, &cubeVBO);
 //
 //	glfwTerminate();
@@ -183,9 +238,4 @@
 //
 //	camera.ProcessMouseMovement(xoffset, yoffset);
 //
-//}
-//
-//void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
-//{
-//	camera.ProcessMouseScroll(yoffset);
 //}
