@@ -5,8 +5,8 @@
 //#include <glm/gtc/type_ptr.hpp>
 //#include <iostream>
 //#include "../Includes/stb_image.h"
-//#include "../LearnCamera/Camera.h"
-//#include "../LearnShader/Shader.h"
+//#include "../Includes/Camera.h"
+//#include "../Includes/Shader.h"
 //#include "../Includes/Model.h"
 //
 //using namespace::std;
@@ -65,10 +65,10 @@
 //
 //	glEnable(GL_DEPTH_TEST);
 //
-//	Shader ourShader("F:\\opengl\\OpenGLProject\\Source\\\CubeMaps\\Model_ReflectV1.vs", "F:\\opengl\\OpenGLProject\\Source\\\CubeMaps\\Model_ReflectV1.fs");
-//	//Shader ourShader("F:\\opengl\\OpenGLProject\\Source\\\CubeMaps\\Model_Reflect.vs", "F:\\opengl\\OpenGLProject\\Source\\\CubeMaps\\Model_Reflect.fs");
-//	//Shader ourShader("F:\\opengl\\OpenGLProject\\Source\\\CubeMaps\\Model_Refraction.vs", "F:\\opengl\\OpenGLProject\\Source\\\CubeMaps\\Model_Refraction.fs");
-//	Shader skyboxShader("F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\skybox.vs", "F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\skybox.fs");
+//	Shader ourShader("F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\Model_ReflectV1.vs", "F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\Model_ReflectV1.fs");
+//	//Shader ourShader("F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\Model_Reflect.vs", "F:\\opengl\\OpenGLProject\\Source\\\4.5.CubeMaps\\Model_Reflect.fs");
+//	//Shader ourShader("F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\Model_Refraction.vs", "F:\\opengl\\OpenGLProject\\Source\\\4.5.CubeMaps\\Model_Refraction.fs");
+//	Shader skyboxShader("F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\skybox.vs", "F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\skybox.fs");
 //	
 //	Model ourModel("F:\\opengl\\OpenGLProject\\resources\\nanosuit_reflection\\nanosuit.obj");
 //

@@ -5,8 +5,8 @@
 //#include <glm/gtc/type_ptr.hpp>
 //#include <iostream>
 //#include "../Includes/stb_image.h"
-//#include "../LearnCamera/Camera.h"
-//#include "../LearnShader/Shader.h"
+//#include "../Includes/Camera.h"
+//#include "../Includes/Shader.h"
 //#include "../Includes/Model.h"
 //
 //void framebuffer_size_callback(GLFWwindow* window, int width, int height);

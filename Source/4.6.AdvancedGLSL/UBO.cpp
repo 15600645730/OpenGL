@@ -127,10 +127,10 @@
 //
 //	unsigned int uboMatices;
 //	glGenBuffers(1, &uboMatices);
-//    glBindBuffer(GL_UNIFORM_BUFFER, uboMatices);
+//  glBindBuffer(GL_UNIFORM_BUFFER, uboMatices);
 //	glBufferData(GL_UNIFORM_BUFFER, 2 * sizeof(glm::mat4), NULL, GL_STATIC_DRAW);
 //	glBindBuffer(GL_UNIFORM_BUFFER, 0);
-//    glBindBufferRange(GL_UNIFORM_BUFFER, 0, uboMatices, 0, 2 * sizeof(glm::mat4));
+//  glBindBufferRange(GL_UNIFORM_BUFFER, 0, uboMatices, 0, 2 * sizeof(glm::mat4));
 //
 //	glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 //	glBindBuffer(GL_UNIFORM_BUFFER, uboMatices);

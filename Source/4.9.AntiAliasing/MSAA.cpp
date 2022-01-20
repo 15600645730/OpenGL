@@ -4,8 +4,8 @@
 //#include <glm/glm.hpp>
 //#include <glm/gtc/matrix_transform.hpp>
 //#include <glm/gtc/type_ptr.hpp>
-//#include "../LearnCamera/Camera.h"
-//#include "../LearnShader/Shader.h"
+//#include "../Includes/Camera.h"
+//#include "../Includes/Shader.h"
 //#include "../Includes/stb_image.h"
 //
 //void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -55,8 +55,8 @@
 //	glEnable(GL_MULTISAMPLE);
 //	glEnable(GL_DEPTH_TEST);
 //
-//	//Shader shader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\AntiAliasing\\MSAA.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\AntiAliasing\\MSAA.fs");
-//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\AntiAliasing\\MSAA.vs", "F:\\opengl\\OpenGLProject\\Source\\AntiAliasing\\MSAA.fs");
+//	//Shader shader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.9.AntiAliasing\\MSAA.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.9.AntiAliasing\\MSAA.fs");
+//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\4.9.AntiAliasing\\MSAA.vs", "F:\\opengl\\OpenGLProject\\Source\\4.9.AntiAliasing\\MSAA.fs");
 //	
 //	GLfloat cubeVertices[] = {
 //		// Positions       

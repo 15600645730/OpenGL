@@ -1,12 +1,12 @@
 //#include <glad/glad.h>
 //#include <GLFW/glfw3.h>
 //#include <iostream>
-//#include "../LearnShader/Shader.h"
-//#include "../Includes/stb_image.h"
 //#include <glm/glm.hpp>
 //#include <glm/gtc/matrix_transform.hpp>
 //#include <glm/gtc/type_ptr.hpp>
-//#include "../LearnCamera/Camera.h"
+//#include "../Includes/Camera.h"
+//#include "../Includes/Shader.h"
+//#include "../Includes/stb_image.h"
 //
 //void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 //void processInput(GLFWwindow* window);
@@ -56,8 +56,10 @@
 //
 //	glEnable(GL_DEPTH_TEST);
 //
-//	Shader cube("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LearnLight\\cube.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LearnLight\\cube.fs");
-//	Shader light("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LearnLight\\light.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\LearnLight\\light.fs");
+//	//Shader cube("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\2.1.LearnLight\\cube.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\2.1.LearnLight\\cube.fs");
+//	//Shader light("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\2.1.LearnLight\\light.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\2.1.LearnLight\\light.fs");
+//	Shader cube("F:\\opengl\\OpenGLProject\\Source\\2.1.LearnLight\\cube.vs", "F:\\opengl\\OpenGLProject\\Source\\2.1.LearnLight\\cube.fs");
+//	Shader light("F:\\opengl\\OpenGLProject\\Source\\2.1.LearnLight\\light.vs", "F:\\opengl\\OpenGLProject\\Source\\2.1.LearnLight\\light.fs");
 //
 //	float vertices[] = {
 //	-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,

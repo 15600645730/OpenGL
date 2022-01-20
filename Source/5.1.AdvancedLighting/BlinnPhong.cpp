@@ -4,8 +4,8 @@
 //#include <glm/glm.hpp>
 //#include <glm/gtc/matrix_transform.hpp>
 //#include <glm/gtc/type_ptr.hpp>
-//#include "../LearnCamera/Camera.h"
-//#include "../LearnShader/Shader.h"
+//#include "../Includes/Camera.h"
+//#include "../Includes/Shader.h"
 //#include "../Includes/stb_image.h"
 //
 //void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -56,9 +56,12 @@
 //	}
 //
 //	glEnable(GL_DEPTH_TEST);
+//	glEnable(GL_BLEND);
+//	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 //
-//	//Shader shader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\AdvancedLighting\\light.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\AdvancedLighting\\light.fs");
-//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\AdvancedLighting\\light.vs", "F:\\opengl\\OpenGLProject\\Source\\AdvancedLighting\\light.fs");
+//	//Shader shader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\5.1.AdvancedLighting\\light.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\5.1.AdvancedLighting\\light.fs");
+//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\5.1.AdvancedLighting\\light.vs", "F:\\opengl\\OpenGLProject\\Source\\5.1.AdvancedLighting\\light.fs");
+//	
 //	float planeVertices[] = {
 //		// positions            // normals         // texcoords
 //		 10.0f, -0.5f,  10.0f,  0.0f, 1.0f, 0.0f,  10.0f,  0.0f,
@@ -84,8 +87,12 @@
 //	glEnableVertexAttribArray(2);
 //	glBindVertexArray(0);
 //
-//	unsigned int floorTexture = loadTexture("F:\\opengl\\OpenGLProject\\Source\\LearnTexture\\container.jpg");
-//	
+//	//unsigned int floorTexture = loadTexture("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\textures\\wood.png");
+//	unsigned int floorTexture = loadTexture("F:\\opengl\\OpenGLProject\\resources\\textures\\wood.png");
+//
+//	shader.use();
+//	shader.setInt("texture1", 0);
+//
 //	glm::vec3 lightPos(0.0f, 0.0f, 0.0f);
 //
 //	while (!glfwWindowShouldClose(window))
