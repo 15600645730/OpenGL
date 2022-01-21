@@ -4,8 +4,8 @@
 //#include <glm/glm.hpp>
 //#include <glm/gtc/matrix_transform.hpp>
 //#include <glm/gtc/type_ptr.hpp>
-//#include "../LearnCamera/Camera.h"
-//#include "../LearnShader/Shader.h"
+//#include "../Includes/Camera.h"
+//#include "../Includes/Shader.h"
 //#include "../Includes/stb_image.h"
 //
 //using namespace::std;
@@ -54,7 +54,7 @@
 //
 //	glEnable(GL_DEPTH_TEST);
 //
-//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\GeometryShader\\GeometryShader.vs", "F:\\opengl\\OpenGLProject\\Source\\GeometryShader\\GeometryShader.fs", "F:\\opengl\\OpenGLProject\\Source\\GeometryShader\\GeometryShader.gs");
+//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\4.7.GeometryShader\\GeometryShader.vs", "F:\\opengl\\OpenGLProject\\Source\\4.7.GeometryShader\\GeometryShader.fs", "F:\\opengl\\OpenGLProject\\Source\\4.7.GeometryShader\\GeometryShader.gs");
 //
 //	float points[] = {
 //		-0.5f,  0.5f, 1.0f, 0.0f, 0.0f, // 左上

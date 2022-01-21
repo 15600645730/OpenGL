@@ -5,8 +5,8 @@
 //#include <glm/gtc/type_ptr.hpp>
 //#include <iostream>
 //#include "../Includes/stb_image.h"
-//#include "../LearnCamera/Camera.h"
-//#include "../LearnShader/Shader.h"
+//#include "../Includes/Camera.h"
+//#include "../Includes/Shader.h"
 //
 //void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 //void mouse_callback(GLFWwindow* window, double xpos, double ypos);
@@ -75,8 +75,8 @@
 //
 //	// build and compile our shader zprogram
 //	// ------------------------------------
-//	Shader cube("F:\\opengl\\OpenGLProject\\Source\\\MultipleLights\\MultipleLights.vs", "F:\\opengl\\OpenGLProject\\Source\\\MultipleLights\\MultipleLights.fs");
-//	Shader light("F:\\opengl\\OpenGLProject\\Source\\LearnLight\\light.vs", "F:\\opengl\\OpenGLProject\\Source\\LearnLight\\light.fs");
+//	Shader cube("F:\\opengl\\OpenGLProject\\Source\\2.5.MultipleLights\\MultipleLights.vs", "F:\\opengl\\OpenGLProject\\Source\\2.5.MultipleLights\\MultipleLights.fs");
+//	Shader light("F:\\opengl\\OpenGLProject\\Source\\2.1.LearnLight\\light.vs", "F:\\opengl\\OpenGLProject\\Source\\2.1.LearnLight\\light.fs");
 //
 //	glm::vec3 cubePositions[] =
 //	{
@@ -173,9 +173,8 @@
 //
 //	// load textures (we now use a utility function to keep the code more organized)
 //	// -----------------------------------------------------------------------------
-//	unsigned int diffuseMap = loadTexture("F:\\opengl\\OpenGLProject\\Source\\LightingMaps\\container2.png");
-//	unsigned int specularMap = loadTexture("F:\\opengl\\OpenGLProject\\Source\\LightingMaps\\container2_specular.png");
-//
+//	unsigned int diffuseMap = loadTexture("F:\\opengl\\OpenGLProject\\resources\\textures\\container2.png");
+//    unsigned int specularMap = loadTexture("F:\\opengl\\OpenGLProject\\resources\\textures\\container2_specular.png");
 //	// shader configuration
 //	// --------------------
 //	cube.use();

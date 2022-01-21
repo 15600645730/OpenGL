@@ -76,7 +76,7 @@
 //
 //	// build and compile our shader zprogram
 //	// ------------------------------------
-//	Shader ourShader("F:\\opengl\\OpenGLProject\\Source\\\GeometryShader\\Explode.vs", "F:\\opengl\\OpenGLProject\\Source\\\GeometryShader\\Explode.fs", "F:\\opengl\\OpenGLProject\\Source\\\GeometryShader\\Explode.gs");
+//	Shader ourShader("F:\\opengl\\OpenGLProject\\Source\\4.7.GeometryShader\\Explode.vs", "F:\\opengl\\OpenGLProject\\Source\\4.7.GeometryShader\\Explode.fs", "F:\\opengl\\OpenGLProject\\Source\\4.7.GeometryShader\\Explode.gs");
 //
 //	// load models
 //	// -----------

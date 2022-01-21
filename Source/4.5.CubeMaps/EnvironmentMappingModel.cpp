@@ -66,8 +66,8 @@
 //	glEnable(GL_DEPTH_TEST);
 //
 //	Shader ourShader("F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\Model_ReflectV1.vs", "F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\Model_ReflectV1.fs");
-//	//Shader ourShader("F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\Model_Reflect.vs", "F:\\opengl\\OpenGLProject\\Source\\\4.5.CubeMaps\\Model_Reflect.fs");
-//	//Shader ourShader("F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\Model_Refraction.vs", "F:\\opengl\\OpenGLProject\\Source\\\4.5.CubeMaps\\Model_Refraction.fs");
+//	//Shader ourShader("F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\Model_Reflect.vs", "F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\Model_Reflect.fs");
+//	//Shader ourShader("F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\Model_Refraction.vs", "F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\Model_Refraction.fs");
 //	Shader skyboxShader("F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\skybox.vs", "F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\skybox.fs");
 //	
 //	Model ourModel("F:\\opengl\\OpenGLProject\\resources\\nanosuit_reflection\\nanosuit.obj");

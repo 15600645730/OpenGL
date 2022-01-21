@@ -1,12 +1,12 @@
 //#include <glad/glad.h>
 //#include <GLFW/glfw3.h>
 //#include <iostream>
-//#include "../LearnShader/Shader.h"
-//#include "../Includes/stb_image.h"
 //#include <glm/glm.hpp>
 //#include <glm/gtc/matrix_transform.hpp>
 //#include <glm/gtc/type_ptr.hpp>
-//#include "../LearnCamera/Camera.h"
+//#include "../Includes/Camera.h"
+//#include "../Includes/Shader.h"
+//#include "../Includes/stb_image.h"
 //
 //void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 //void processInput(GLFWwindow* window);
@@ -55,7 +55,8 @@
 //
 //	glEnable(GL_DEPTH_TEST);
 //
-//	Shader shader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\Blending\\Blending.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\Blending\\Blending.fs");
+//	//Shader shader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.2.Blending\\Blending.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.2.Blending\\Blending.fs");
+//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\4.2.Blending\\Blending.vs", "F:\\opengl\\OpenGLProject\\Source\\4.2.Blending\\Blending.fs");
 //	
 //	float cubeVertices[] = {
 //		// positions          // texture Coords
@@ -157,9 +158,13 @@
 //	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
 //	glBindVertexArray(0);
 //
-//	unsigned int cubeTexture = loadTexture("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\Blending\\container.jpg");
-//	unsigned int floorTexture = loadTexture("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\Blending\\matrix.jpg");
-//	unsigned int transparentTexture = loadTexture("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\Blending\\grass.png");
+//	//unsigned int cubeTexture = loadTexture("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\textures\\container.jpg");
+//	//unsigned int floorTexture = loadTexture("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\textures\\matrix.jpg");
+//	//unsigned int transparentTexture = loadTexture("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\textures\\grass.png");
+//	unsigned int cubeTexture = loadTexture("F:\\opengl\\OpenGLProject\\resources\\textures\\container.jpg");
+//	unsigned int floorTexture = loadTexture("F:\\opengl\\OpenGLProject\\resources\\textures\\metal.png");
+//	unsigned int transparentTexture = loadTexture("F:\\opengl\\OpenGLProject\\resources\\textures\\grass.png");
+//
 //
 //	glm::vec3 vegetation[]
 //	{
@@ -267,7 +272,7 @@
 //	}
 //
 //	float xoffset = xpos - lastX;
-//	float yoffset = lastY - ypos;// ×¢ÒâÕâÀïÊÇÏà·´µÄ£¬ÒòÎªy×ø±êÊÇ´Óµ×²¿Íù¶¥²¿ÒÀ´ÎÔö´óµÄ
+//	float yoffset = lastY - ypos;// æ³¨æ„è¿™é‡Œæ˜¯ç›¸åçš„ï¼Œå› ä¸ºyåæ ‡æ˜¯ä»åº•éƒ¨å¾€é¡¶éƒ¨ä¾æ¬¡å¢å¤§çš„
 //	lastX = xpos;
 //	lastY = ypos;
 //

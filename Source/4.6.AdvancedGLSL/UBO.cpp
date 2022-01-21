@@ -4,8 +4,8 @@
 //#include <glm/glm.hpp>
 //#include <glm/gtc/matrix_transform.hpp>
 //#include <glm/gtc/type_ptr.hpp>
-//#include "../LearnCamera/Camera.h"
-//#include "../LearnShader/Shader.h"
+//#include "../Includes/Camera.h"
+//#include "../Includes/Shader.h"
 //#include "../Includes/stb_image.h"
 //
 //using namespace::std;
@@ -54,10 +54,10 @@
 //
 //	glEnable(GL_DEPTH_TEST);
 //
-//	Shader red("F:\\opengl\\OpenGLProject\\Source\\AdvancedGLSL\\Ubo.vs", "F:\\opengl\\OpenGLProject\\Source\\AdvancedGLSL\\Red.fs");
-//	Shader green("F:\\opengl\\OpenGLProject\\Source\\AdvancedGLSL\\Ubo.vs", "F:\\opengl\\OpenGLProject\\Source\\AdvancedGLSL\\Green.fs");
-//	Shader blue("F:\\opengl\\OpenGLProject\\Source\\AdvancedGLSL\\Ubo.vs", "F:\\opengl\\OpenGLProject\\Source\\AdvancedGLSL\\Blue.fs");
-//	Shader yellow("F:\\opengl\\OpenGLProject\\Source\\AdvancedGLSL\\Ubo.vs", "F:\\opengl\\OpenGLProject\\Source\\AdvancedGLSL\\Yellow.fs");
+//	Shader red("F:\\opengl\\OpenGLProject\\Source\\4.6.AdvancedGLSL\\Ubo.vs", "F:\\opengl\\OpenGLProject\\Source\\4.6.AdvancedGLSL\\Red.fs");
+//	Shader green("F:\\opengl\\OpenGLProject\\Source\\4.6.AdvancedGLSL\\Ubo.vs", "F:\\opengl\\OpenGLProject\\Source\\4.6.AdvancedGLSL\\Green.fs");
+//	Shader blue("F:\\opengl\\OpenGLProject\\Source\\4.6.AdvancedGLSL\\Ubo.vs", "F:\\opengl\\OpenGLProject\\Source\\4.6.AdvancedGLSL\\Blue.fs");
+//	Shader yellow("F:\\opengl\\OpenGLProject\\Source\\4.6.AdvancedGLSL\\Ubo.vs", "F:\\opengl\\OpenGLProject\\Source\\4.6.AdvancedGLSL\\Yellow.fs");
 //
 //	float cubeVertices[] = {
 //		// positions         
@@ -127,10 +127,10 @@
 //
 //	unsigned int uboMatices;
 //	glGenBuffers(1, &uboMatices);
-//  glBindBuffer(GL_UNIFORM_BUFFER, uboMatices);
+//    glBindBuffer(GL_UNIFORM_BUFFER, uboMatices);
 //	glBufferData(GL_UNIFORM_BUFFER, 2 * sizeof(glm::mat4), NULL, GL_STATIC_DRAW);
 //	glBindBuffer(GL_UNIFORM_BUFFER, 0);
-//  glBindBufferRange(GL_UNIFORM_BUFFER, 0, uboMatices, 0, 2 * sizeof(glm::mat4));
+//    glBindBufferRange(GL_UNIFORM_BUFFER, 0, uboMatices, 0, 2 * sizeof(glm::mat4));
 //
 //	glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 //	glBindBuffer(GL_UNIFORM_BUFFER, uboMatices);

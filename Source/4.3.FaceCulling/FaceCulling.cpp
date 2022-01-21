@@ -1,12 +1,12 @@
 //#include <glad/glad.h>
 //#include <GLFW/glfw3.h>
 //#include <iostream>
-//#include "../LearnShader/Shader.h"
-//#include "../Includes/stb_image.h"
 //#include <glm/glm.hpp>
 //#include <glm/gtc/matrix_transform.hpp>
 //#include <glm/gtc/type_ptr.hpp>
-//#include "../LearnCamera/Camera.h"
+//#include "../Includes/Camera.h"
+//#include "../Includes/Shader.h"
+//#include "../Includes/stb_image.h"
 //#include <map>
 //#include <vector>
 //
@@ -58,7 +58,7 @@
 //	glEnable(GL_DEPTH_TEST);
 //	glEnable(GL_CULL_FACE);
 //
-//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\FaceCulling\\FaceCulling.vs", "F:\\opengl\\OpenGLProject\\Source\\FaceCulling\\FaceCulling.fs");
+//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\4.3.FaceCulling\\FaceCulling.vs", "F:\\opengl\\OpenGLProject\\Source\\4.3.FaceCulling\\FaceCulling.fs");
 //
 //	float cubeVertices[] = {
 //		// Back face
@@ -118,7 +118,7 @@
 //	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
 //	
 //
-//	unsigned int cubeTexture = loadTexture("F:\\opengl\\OpenGLProject\\Source\\Blending\\container.jpg");
+//	unsigned int cubeTexture = loadTexture("F:\\opengl\\OpenGLProject\\resources\\textures\\container.jpg");
 //
 //	shader.use();
 //	shader.setInt("texture1", 0);

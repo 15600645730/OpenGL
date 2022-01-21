@@ -4,9 +4,9 @@
 //#include <glm/glm.hpp>
 //#include <glm/gtc/matrix_transform.hpp>
 //#include <glm/gtc/type_ptr.hpp>
-//#include "../LearnShader/Shader.h"
+//#include "../Includes/Shader.h"
 //#include "../Includes/stb_image.h"
-//#include "../LearnCamera/Camera.h"
+//#include "../Includes/Camera.h"
 //
 //void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 //void processInput(GLFWwindow* window);
@@ -55,8 +55,8 @@
 //
 //	glEnable(GL_DEPTH_TEST);
 //
-//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\Framebuffers\\Framebuffers.vs", "F:\\opengl\\OpenGLProject\\Source\\Framebuffers\\Framebuffers.fs");
-//	Shader screenShader("F:\\opengl\\OpenGLProject\\Source\\Framebuffers\\Screen.vs", "F:\\opengl\\OpenGLProject\\Source\\Framebuffers\\Screen.fs");
+//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\4.4.Framebuffers\\Framebuffers.vs", "F:\\opengl\\OpenGLProject\\Source\\4.4.Framebuffers\\Framebuffers.fs");
+//	Shader screenShader("F:\\opengl\\OpenGLProject\\Source\\4.4.Framebuffers\\Screen.vs", "F:\\opengl\\OpenGLProject\\Source\\4.4.Framebuffers\\Screen.fs");
 //
 //	float cubeVertices[] = {
 //		// positions          // texture Coords
@@ -159,8 +159,8 @@
 //	glEnableVertexAttribArray(1);
 //	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)(2 * sizeof(float)));
 //
-//	unsigned int cubeTexture = loadTexture("F:\\opengl\\OpenGLProject\\Source\\Blending\\container.jpg");
-//	unsigned int floorTexture = loadTexture("F:\\opengl\\OpenGLProject\\Source\\Blending\\matrix.jpg");
+//	unsigned int cubeTexture = loadTexture("F:\\opengl\\OpenGLProject\\resources\\textures\\container.jpg");
+//	unsigned int floorTexture = loadTexture("F:\\opengl\\OpenGLProject\\resources\\textures\\metal.png");
 //
 //	shader.use();
 //	shader.setInt("texture1", 0);

@@ -1,7 +1,7 @@
 //#include <glad/glad.h>
 //#include <GLFW/glfw3.h>
 //#include <iostream>
-//#include "Shader.h"
+//#include "../Includes/Shader.h"
 //
 //void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 //void processInput(GLFWwindow* window);
@@ -37,7 +37,7 @@
 //
 //	// build and compile our shader program
 //	// -------------------------------------------------------------------------------
-//	Shader ourShader("F:\\opengl\\OpenGLProject\\Source\\LearnShader\\shader1.vs", "F:\\opengl\\OpenGLProject\\Source\\LearnShader\\shader1.fs");
+//	Shader ourShader("F:\\opengl\\OpenGLProject\\Source\\1.2.LearnShader\\shader1.vs", "F:\\opengl\\OpenGLProject\\Source\\1.2.LearnShader\\shader1.fs");
 //
 //	// set up vertex data (and buffer(s)) and configure vertex attributes
 //	// -------------------------------------------------------------------------------

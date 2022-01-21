@@ -5,8 +5,8 @@
 //#include <glm/gtc/type_ptr.hpp>
 //#include <iostream>
 //#include "../Includes/stb_image.h"
-//#include "../LearnCamera/Camera.h"
-//#include "../LearnShader/Shader.h"
+//#include "../Includes/Camera.h"
+//#include "../Includes/Shader.h"
 //#include "../Includes/Model.h"
 //
 //void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -76,8 +76,8 @@
 //
 //	// build and compile our shader zprogram
 //	// ------------------------------------
-//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\\GeometryShader\\default.vs", "F:\\opengl\\OpenGLProject\\Source\\\GeometryShader\\default.fs");
-//	Shader normalShader("F:\\opengl\\OpenGLProject\\Source\\\GeometryShader\\ShowNormal.vs", "F:\\opengl\\OpenGLProject\\Source\\\GeometryShader\\ShowNormal.fs", "F:\\opengl\\OpenGLProject\\Source\\\GeometryShader\\ShowNormal.gs");
+//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\4.7.GeometryShader\\default.vs", "F:\\opengl\\OpenGLProject\\Source\\4.7.GeometryShader\\default.fs");
+//	Shader normalShader("F:\\opengl\\OpenGLProject\\Source\\4.7.GeometryShader\\ShowNormal.vs", "F:\\opengl\\OpenGLProject\\Source\\4.7.GeometryShader\\ShowNormal.fs", "F:\\opengl\\OpenGLProject\\Source\\4.7.GeometryShader\\ShowNormal.gs");
 //
 //	// load models
 //	// -----------

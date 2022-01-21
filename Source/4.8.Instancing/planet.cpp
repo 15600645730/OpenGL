@@ -5,8 +5,8 @@
 //#include <glm/gtc/type_ptr.hpp>
 //#include <iostream>
 //#include "../Includes/stb_image.h"
-//#include "../LearnCamera/Camera.h"
-//#include "../LearnShader/Shader.h"
+//#include "../Includes/Camera.h"
+//#include "../Includes/Shader.h"
 //#include "../Includes/Model.h"
 //
 //
@@ -75,18 +75,18 @@
 //
 //	//// build and compile our shader zprogram
 //	//// ------------------------------------
-//	//Shader planetShader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\\Instancing\\planet.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\\Instancing\\planet.fs");
-//	//Shader rockShader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\\Instancing\\rock.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\\Instancing\\rock.fs");
+//	//Shader planetShader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.8.Instancing\\planet.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.8.Instancing\\planet.fs");
+//	//Shader rockShader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.8.Instancing\\rock.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.8.Instancing\\rock.fs");
 //	//// load models
-// //   // -----------
+//    //// -----------
 //	//Model planet("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\planet\\planet.obj");
 //	//Model rock("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\rock\\rock.obj");
 //
 //	
 //	// build and compile our shader zprogram
 //	// ------------------------------------
-//	Shader planetShader("F:\\opengl\\OpenGLProject\\Source\\\Instancing\\planet.vs", "F:\\opengl\\OpenGLProject\\Source\\\Instancing\\planet.fs");
-//	Shader rockShader("F:\\opengl\\OpenGLProject\\Source\\\Instancing\\rock.vs", "F:\\opengl\\OpenGLProject\\Source\\\Instancing\\rock.fs");
+//	Shader planetShader("F:\\opengl\\OpenGLProject\\Source\\4.8.Instancing\\planet.vs", "F:\\opengl\\OpenGLProject\\Source\\4.8.Instancing\\planet.fs");
+//	Shader rockShader("F:\\opengl\\OpenGLProject\\Source\\4.8.Instancing\\rock.vs", "F:\\opengl\\OpenGLProject\\Source\\4.8.Instancing\\rock.fs");
 //	// load models
 //	// -----------
 //	Model planet("F:\\opengl\\OpenGLProject\\resources\\planet\\planet.obj");

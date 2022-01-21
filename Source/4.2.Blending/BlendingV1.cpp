@@ -1,12 +1,12 @@
 //#include <glad/glad.h>
 //#include <GLFW/glfw3.h>
 //#include <iostream>
-//#include "../LearnShader/Shader.h"
-//#include "../Includes/stb_image.h"
 //#include <glm/glm.hpp>
 //#include <glm/gtc/matrix_transform.hpp>
 //#include <glm/gtc/type_ptr.hpp>
-//#include "../LearnCamera/Camera.h"
+//#include "../Includes/Camera.h"
+//#include "../Includes/Shader.h"
+//#include "../Includes/stb_image.h"
 //#include <map>
 //#include <vector>
 //
@@ -59,7 +59,8 @@
 //	glEnable(GL_BLEND);
 //	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 //
-//	Shader shader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\Blending\\BlendingV1.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\Blending\\BlendingV1.fs");
+//	//Shader shader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.2.Blending\\BlendingV1.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.2.Blending\\BlendingV1.fs");
+//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\4.2.Blending\\BlendingV1.vs", "F:\\opengl\\OpenGLProject\\Source\\4.2.Blending\\BlendingV1.fs");
 //	
 //	float cubeVertices[] = {
 //		// positions          // texture Coords
@@ -161,9 +162,13 @@
 //	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
 //	glBindVertexArray(0);
 //
-//	unsigned int cubeTexture = loadTexture("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\Blending\\container.jpg");
-//	unsigned int floorTexture = loadTexture("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\Blending\\matrix.jpg");
-//	unsigned int transparentTexture = loadTexture("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\Blending\\blending_transparent_window.png");
+//	//unsigned int cubeTexture = loadTexture("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\textures\\container.jpg");
+//	//unsigned int floorTexture = loadTexture("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\textures\\matrix.jpg");
+//	//unsigned int transparentTexture = loadTexture("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\resources\\textures\\blending_transparent_window.png");
+//	unsigned int cubeTexture = loadTexture("F:\\opengl\\OpenGLProject\\resources\\textures\\container.jpg");
+//	unsigned int floorTexture = loadTexture("F:\\opengl\\OpenGLProject\\resources\\textures\\metal.png");
+//	unsigned int transparentTexture = loadTexture("F:\\opengl\\OpenGLProject\\resources\\textures\\blending_transparent_window.png");
+//
 //
 //	glm::vec3 windows[]
 //	{
@@ -279,7 +284,7 @@
 //	}
 //
 //	float xoffset = xpos - lastX;
-//	float yoffset = lastY - ypos;// ×¢ÒâÕâÀïÊÇÏà·´µÄ£¬ÒòÎªy×ø±êÊÇ´Óµ×²¿Íù¶¥²¿ÒÀ´ÎÔö´óµÄ
+//	float yoffset = lastY - ypos;// æ³¨æ„è¿™é‡Œæ˜¯ç›¸åçš„ï¼Œå› ä¸ºyåæ ‡æ˜¯ä»åº•éƒ¨å¾€é¡¶éƒ¨ä¾æ¬¡å¢å¤§çš„
 //	lastX = xpos;
 //	lastY = ypos;
 //

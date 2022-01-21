@@ -4,8 +4,8 @@
 //#include <glm/glm.hpp>
 //#include <glm/gtc/matrix_transform.hpp>
 //#include <glm/gtc/type_ptr.hpp>
-//#include "../LearnCamera/Camera.h"
-//#include "../LearnShader/Shader.h"
+//#include "../Includes/Camera.h"
+//#include "../Includes/Shader.h"
 //#include "../Includes/stb_image.h"
 //
 //using namespace::std;
@@ -58,17 +58,13 @@
 //
 //	glEnable(GL_DEPTH_TEST);
 //
-//	// Reflect
-//	/*Shader shader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\CubeMaps\\CubeMaps_Reflect.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\CubeMaps\\CubeMaps_Reflect.fs");
-//	Shader skyboxShader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\CubeMaps\\skybox.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\CubeMaps\\skybox.fs");*/
-//	//Shader shader("F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\CubeMaps_Reflect.vs", "F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\CubeMaps_Reflect.fs");
-//	//Shader skyboxShader("F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\skybox.vs", "F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\skybox.fs");
+//	//Shader shader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.5.CubeMaps\\CubeMaps_Reflect.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.5.CubeMaps\\CubeMaps_Reflect.fs");
+//	//Shader shader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.5.CubeMaps\\CubeMaps_Refraction.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.5.CubeMaps\\CubeMaps_Refraction.fs");
+//	//Shader skyboxShader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.5.CubeMaps\\skybox.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.5.CubeMaps\\skybox.fs");
 //	
-//	// Refraction
-//	/*Shader shader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\CubeMaps\\CubeMaps_Reflect.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\CubeMaps\\CubeMaps_Reflect.fs");
-//	Shader skyboxShader("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\CubeMaps\\skybox.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\CubeMaps\\skybox.fs");*/
-//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\CubeMaps_Refraction.vs", "F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\CubeMaps_Refraction.fs");
-//	Shader skyboxShader("F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\skybox.vs", "F:\\opengl\\OpenGLProject\\Source\\CubeMaps\\skybox.fs");
+//	//Shader shader("F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\CubeMaps_Reflect.vs", "F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\CubeMaps_Reflect.fs");
+//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\CubeMaps_Refraction.vs", "F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\CubeMaps_Refraction.fs");
+//	Shader skyboxShader("F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\skybox.vs", "F:\\opengl\\OpenGLProject\\Source\\4.5.CubeMaps\\skybox.fs");
 //
 //	float cubeVertices[] = {
 //	-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,

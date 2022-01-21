@@ -1,12 +1,12 @@
 //#include <glad/glad.h>
 //#include <GLFW/glfw3.h>
 //#include <iostream>
-//#include "../LearnShader/Shader.h"
-//#include "../Includes/stb_image.h"
 //#include <glm/glm.hpp>
 //#include <glm/gtc/matrix_transform.hpp>
 //#include <glm/gtc/type_ptr.hpp>
-//#include "../LearnCamera/Camera.h"
+//#include "../Includes/Camera.h"
+//#include "../Includes/Shader.h"
+//#include "../Includes/stb_image.h"
 //
 //void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 //void processInput(GLFWwindow* window);
@@ -58,8 +58,10 @@
 //	glEnable(GL_STENCIL_TEST);
 //	glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
 //
-//	Shader cube("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\StencilTesting\\cube.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\StencilTesting\\cube.fs");
-//	Shader shaderSingleColor("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\StencilTesting\\StencilTesting.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\StencilTesting\\StencilTesting.fs");
+//	//Shader cube("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.1.StencilTesting\\cube.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.1.StencilTesting\\cube.fs");
+//	//Shader shaderSingleColor("D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.1.StencilTesting\\StencilTesting.vs", "D:\\UE4\\LearnOpenGL\\LearnOpenGL\\Source\\4.1.StencilTesting\\StencilTesting.fs");
+//	Shader cube("F:\\opengl\\OpenGLProject\\Source\\4.1.StencilTesting\\cube.vs", "F:\\opengl\\OpenGLProject\\Source\\4.1.StencilTesting\\cube.fs");
+//	Shader shaderSingleColor("F:\\opengl\\OpenGLProject\\Source\\4.1.StencilTesting\\StencilTesting.vs", "F:\\opengl\\OpenGLProject\\Source\\4.1.StencilTesting\\StencilTesting.fs");
 //
 //	float vertices[] = {
 //	-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
@@ -202,7 +204,7 @@
 //	}
 //
 //	float xoffset = xpos - lastX;
-//	float yoffset = lastY - ypos;// ×¢ÒâÕâÀïÊÇÏà·´µÄ£¬ÒòÎªy×ø±êÊÇ´Óµ×²¿Íù¶¥²¿ÒÀ´ÎÔö´óµÄ
+//	float yoffset = lastY - ypos;// æ³¨æ„è¿™é‡Œæ˜¯ç›¸åçš„ï¼Œå› ä¸ºyåæ ‡æ˜¯ä»åº•éƒ¨å¾€é¡¶éƒ¨ä¾æ¬¡å¢å¤§çš„
 //	lastX = xpos;
 //	lastY = ypos;
 //

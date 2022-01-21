@@ -1,12 +1,12 @@
 //#include <glad/glad.h>
 //#include <GLFW/glfw3.h>
 //#include <iostream>
-//#include "../LearnShader/Shader.h"
-//#include "../Includes/stb_image.h"
 //#include <glm/glm.hpp>
 //#include <glm/gtc/matrix_transform.hpp>
 //#include <glm/gtc/type_ptr.hpp>
-//#include "../LearnCamera/Camera.h"
+//#include "../Includes/Camera.h"
+//#include "../Includes/Shader.h"
+//#include "../Includes/stb_image.h"
 //#include <map>
 //#include <vector>
 //#include <string>
@@ -60,7 +60,7 @@
 //
 //	glEnable(GL_DEPTH_TEST);
 //
-//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\Instancing\\AsteroidField.vs", "F:\\opengl\\OpenGLProject\\Source\\Instancing\\AsteroidField.fs");
+//	Shader shader("F:\\opengl\\OpenGLProject\\Source\\4.8.Instancing\\AsteroidField.vs", "F:\\opengl\\OpenGLProject\\Source\\4.8.Instancing\\AsteroidField.fs");
 //
 //	float quadVertices[] = {
 //		// 位置          // 颜色
@@ -83,6 +83,7 @@
 //	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
 //	glEnableVertexAttribArray(1);
 //	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(2 * sizeof(float)));
+//	glBindVertexArray(0);
 //
 //	glm::vec2 translations[100];
 //	int index = 0;
@@ -103,7 +104,7 @@
 //	glBindBuffer(GL_ARRAY_BUFFER, instanceVBO);
 //	glBufferData(GL_ARRAY_BUFFER, sizeof(glm::vec2) * 100, &translations[0], GL_STATIC_DRAW);
 //	glBindBuffer(GL_ARRAY_BUFFER, 0);
-//
+//	glBindVertexArray(VAO);
 //	glEnableVertexAttribArray(2);
 //	glBindBuffer(GL_ARRAY_BUFFER, instanceVBO);
 //	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
